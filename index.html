@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>🪨📄✂️ Rock Paper Scissors</h1>
+    <p class="sub">Can you beat the computer? First to 5 points wins the match.</p>
+
+    <!-- Scoreboard -->
+    <section class="scoreboard">
+      <div class="score">
+        <span class="label">You</span>
+        <span id="player-score" class="points">0</span>
+      </div>
+      <div class="rounds" id="round-label">Round 1</div>
+      <div class="score">
+        <span class="label">CPU</span>
+        <span id="cpu-score" class="points">0</span>
+      </div>
+    </section>
+
+    <!-- The arena shows both picks -->
+    <section class="arena">
+      <div class="pick">
+        <span class="pick-label">You</span>
+        <span id="player-pick" class="emoji">❔</span>
+      </div>
+      <div id="result" class="result">Make your move!</div>
+      <div class="pick">
+        <span class="pick-label">CPU</span>
+        <span id="cpu-pick" class="emoji">❔</span>
+      </div>
+    </section>
+
+    <!-- Player buttons -->
+    <section class="choices">
+      <button data-choice="rock" class="choice" aria-label="Rock">🪨</button>
+      <button data-choice="paper" class="choice" aria-label="Paper">📄</button>
+      <button data-choice="scissors" class="choice" aria-label="Scissors">✂️</button>
+    </section>
+
+    <p id="verdict" class="verdict"></p>
+    <button id="reset" class="reset">🔄 New match</button>
+
+    <footer>
+      <p>Day 13 of my daily coding journey · built with HTML, CSS &amp; vanilla JavaScript</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Rock Paper Scissors — playful arcade styling. */
+
+:root {
+  --bg: #14101f;
+  --card: #1e1830;
+  --accent: #ffd166;
+  --accent2: #06d6a0;
+  --text: #f4f1fb;
+  --muted: #a9a3c4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  width: min(30rem, 100%);
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.sub {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #171228;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.score .label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.points {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.rounds {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Arena */
+.arena {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.pick {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 5rem;
+}
+
+.pick-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.emoji {
+  font-size: 3rem;
+}
+
+.result {
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 12rem;
+}
+
+/* Choice buttons */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.choice {
+  font-size: 2.5rem;
+  background: #171228;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.1s, border-color 0.2s;
+}
+
+.choice:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.choice:active {
+  transform: translateY(0);
+}
+
+.verdict {
+  font-size: 1.15rem;
+  font-weight: 700;
+  min-height: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.reset {
+  background: var(--accent2);
+  color: #14101f;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.reset:hover {
+  filter: brightness(1.1);
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
